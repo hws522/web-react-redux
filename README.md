@@ -1,4 +1,14 @@
-# Create React-Redux with Egoing
+# Start React-Redux with Egoing
 
 <br>
+<br>
+
+`React 는 사용자 정의 태그, component 를 만들어서 체계적이고 정돈된 애플리케이션을 만들 수 있게 해준다.`
+
+`Redux 는 상태를 중앙에서 관리하는것을 통해서 데이터가 예측을 벗어난 변형 가능성을 낮춰준다.`
+
+`React, Redux 모두 개발의 복잡성을 낮춰주는 기술이다.`
+
+`이 기술들의 장점만을 이용하여 시스템을 만들어 보는 것이 목적이다.`
+
 <br>
