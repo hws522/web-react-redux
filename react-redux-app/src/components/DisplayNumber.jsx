@@ -1,23 +1,16 @@
 import React, { Component } from 'react';
-import store from '../store';
 
 export default class DisplayNumber extends Component {
-  state = { number: store.getState().number };
-  constructor(props) {
-    super(props);
-    store.subscribe(
-      function () {
-        this.setState({ number: store.getState().number });
-      }.bind(this)
-    );
-  }
   render() {
     return (
       <div>
         <h1>Display Number</h1>
 
-        <input type="text" value={this.state.number} readOnly></input>
+        <input type="text" value={this.props.number} readOnly></input>
       </div>
     );
   }
 }
+
+// 이곳에서 어느곳에서 리덕스에 의존하고 있는가 하면 value 값. value 값이 컴포넌트의 스테이트로부터 오게 되는데,
+// 구독을 통해서 값이 세팅되고 있다.

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import store from '../store';
 
 export default class AddNumber extends Component {
   state = { size: 1 };
@@ -11,7 +10,7 @@ export default class AddNumber extends Component {
           type="button"
           value="+"
           onClick={function () {
-            store.dispatch({ type: 'INCREMENT', size: this.state.size });
+            this.props.onClick(this.state.size);
           }.bind(this)}
         ></input>
         <input
@@ -25,3 +24,5 @@ export default class AddNumber extends Component {
     );
   }
 }
+
+// 여기서는 화면에 표현하는 것에 집중하는 프레젠테이셔널 컴포넌트로 예전처럼 기능하는 것.
