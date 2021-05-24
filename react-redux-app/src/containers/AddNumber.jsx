@@ -1,6 +1,13 @@
 import AddNumber from '../components/AddNumber';
 import { connect } from 'react-redux';
-export default connect()(AddNumber);
+function mapDispatchToProps(dispatch) {
+  return {
+    onClick: function (size) {
+      dispatch({ type: 'INCREMENT', size: size });
+    },
+  };
+}
+export default connect(null, mapDispatchToProps)(AddNumber); // state 를 받아올 필요가 없으므로 인자가 필요없다. 그래서 null.
 
 // import React, { Component } from 'react';
 // import store from '../store';
